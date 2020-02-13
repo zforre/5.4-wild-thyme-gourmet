@@ -18,7 +18,7 @@ function FoodList(props) {
         <FoodItem key={index} foodItem={foodItem} addItem={props.addItem} />
     ))
     return (
-        <ul className='list-group list-group-flush foodGroup'>{foodItems}</ul>
+        <ul className='list-group list-group-flush foodGroup col-8'>{foodItems}</ul>
     )
 }
 

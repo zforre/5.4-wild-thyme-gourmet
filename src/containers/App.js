@@ -38,8 +38,8 @@ class Menu extends Component {
       <div className='row'>
           <h1>Wild Thyme Gourmet</h1>
           <div className="w-100"></div>
-          <FoodList foodList={this.state.foodList} addItem={this.addItem} className='col'/>
-          <OrderList orderList={this.state.orderList} className='col'/>
+          <FoodList foodList={this.state.foodList} addItem={this.addItem} />
+          <OrderList orderList={this.state.orderList} />
       </div>
     )
   }
