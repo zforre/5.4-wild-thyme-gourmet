@@ -15,20 +15,31 @@ class Menu extends Component {
     super(props);
 
     this.state = {
-      foodList: []
+      foodList: [],
+      orderList: []
     }
+
+    this.addItem = this.addItem.bind(this)
   }
 
   componentDidMount() {
     this.setState({foodList})
   }
+
+  addItem(e, item) {
+    e.preventDefault();
+    let items = [...this.state.orderList]
+    items.push(item);
+    this.setState({orderList: items})
+  }
   
   render() {
     return (
-      <div>
+      <div className='row'>
           <h1>Wild Thyme Gourmet</h1>
-          <FoodList foodList={this.state.foodList} />
-          <OrderList OrderList={this.state.OrderList} />
+          <div className="w-100"></div>
+          <FoodList foodList={this.state.foodList} addItem={this.addItem} className='col'/>
+          <OrderList orderList={this.state.orderList} className='col'/>
       </div>
     )
   }

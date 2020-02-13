@@ -5,8 +5,9 @@ class OrderItem extends Component {
 
    render() {
        return(
-           <li className='list-group-item'>
-               <span>{this.props.OrderItem.name}</span>
+           <li className='list-group-item orderGroup'>
+               <span>{this.props.orderitem.name}</span>
+               <span className="float-right">{this.props.orderitem.price}</span>
            </li>
        )
    }
@@ -14,8 +15,8 @@ class OrderItem extends Component {
 
 function OrderList(props) {
 
-   let orderItems = props.orderlist.map((orderitem, index) => (
-       <OrderItem orderitem={orderitem} />
+   let orderItems = props.orderList.map((orderitem, index) => (
+       <OrderItem key={index} orderitem={orderitem} />
    ))
    return (
        <ul className='list-group'>{orderItems}</ul>
