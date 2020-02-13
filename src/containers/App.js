@@ -1,5 +1,5 @@
 import React, {Component}from 'react';
-import Order from './../components/order.js'
+import OrderList from './../components/order.js'
 import FoodList from './../components/menu.js'
 import './App.css';
 
@@ -28,6 +28,7 @@ class Menu extends Component {
       <div>
           <h1>Wild Thyme Gourmet</h1>
           <FoodList foodList={this.state.foodList} />
+          <OrderList OrderList={this.state.OrderList} />
       </div>
     )
   }
