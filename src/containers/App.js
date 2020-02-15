@@ -32,11 +32,13 @@ class Menu extends Component {
     items.push(item);
     this.setState({orderList: items})
   }
+
+  
   
   render() {
     return (
-      <div className='row'>
-          <h1>Wild Thyme Gourmet</h1>
+      <div className='row '>
+          <div className="head col"><h1>Wild Thyme Gourmet</h1></div>
           <div className="w-100"></div>
           <FoodList foodList={this.state.foodList} addItem={this.addItem} />
           <OrderList orderList={this.state.orderList} />
