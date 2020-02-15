@@ -29,7 +29,10 @@ function OrderList(props) {
    return (
        
        <ul className='list-group col-4 order '>{orderItems} 
-            <div className="list-group-item"><h5>Subtotal</h5></div>
+            <div className="list-group-item">
+                <h1 className="sub">Subtotal</h1>
+                <button className="btn btn-success float-right orderbtn">Checkout</button>
+            </div>
        </ul>
        
        
